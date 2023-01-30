@@ -1,0 +1,149 @@
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: grid;
+}
+
+body {
+ background-color: var(--light-grayish-blue-2);
+ font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+}
+
+.notifications {
+  width: 90%;
+  max-width: 690px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 1rem 2.7rem;
+  border-radius: 15px;
+  background-color: var(--white);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.header .notifications__title {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  gap: 9px;
+}
+
+.header .header__link {
+  font-weight: 500;
+}
+
+.header .notifications__title .unread-count {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+/* NOTIFICATION */
+.avatar {
+  width: 45px;
+  height: 45px;
+}
+
+.notification__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  justify-self: center;
+}
+
+.notification {
+  padding: 12px 8px 10px;
+  display: grid;
+  grid-template-columns: 60px auto;
+  margin-bottom: 15px;
+}
+
+.notification-unread {
+  border-radius: 8px;
+  background-color: var(--very-light-grayish-blue);
+}
+
+.notification > *:not(.avatar, .notification__avatar) {
+  grid-column: 2 / 2;
+}
+
+.notification__title {
+  font-size: 18px;
+}
+
+.link {
+  font-weight: bold;
+}
+
+.link-group {
+  font-weight: bold;
+  color: var(--blue);
+}
+
+.unread-bubble {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 4px;
+  vertical-align: middle;
+  background-color: red;
+}
+
+.notification__description {
+  font-weight: lighter;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark-grayish-blue);
+}
+
+.notification__date {
+  margin-top: 3px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: var(--grayish-blue);
+}
+
+.notification__message {
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid var(--light-grayish-blue-2);
+}
